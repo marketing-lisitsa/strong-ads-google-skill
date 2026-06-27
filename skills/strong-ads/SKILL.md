@@ -3,7 +3,6 @@ name: strong-ads
 description: Generate high-converting Google Ads copy in English (RSA + Performance Max). Starts with a deep business analysis (who really buys, at what price, what they fear), then finds and analyzes competitors (their sites + live Google ads), researches the real buyer's pains, and writes headlines, long headlines, and descriptions with no AI slop, exact character limits, and no promises beyond the business's real scope. Trigger when the user types "strong ads", "/strong-ads", or asks to write Google Ads headlines, long headlines, or descriptions.
 metadata:
   trigger: User types "strong ads" / "/strong-ads", or asks for Google Ads headlines/descriptions
-  author: marketing@techvill.ca
 ---
 
 # Strong Ads
