@@ -1,13 +1,13 @@
 ---
 name: strong-ads
-description: Generate high-converting Google Ads copy in English (RSA + Performance Max). Starts with a deep business analysis (who really buys, at what price, what they fear), then finds and analyzes competitors (their sites + live Google ads), researches the real buyer's pains, and writes headlines, long headlines, and descriptions with no AI slop, exact character limits, and no promises beyond the business's real scope. Trigger when the user types "strong ads", "/strong-ads", or asks to write Google Ads headlines, long headlines, or descriptions.
+description: Generate high-converting Google Ads copy (RSA + Performance Max) in the target market's language. Starts with a deep business analysis (who really buys, at what price, what they fear), then finds and analyzes competitors (their sites + live Google ads), researches the real buyer's pains, and writes headlines, long headlines, and descriptions with no AI slop, exact character limits, and no promises beyond the business's real scope. Trigger when the user types "strong ads", "/strong-ads", or asks to write Google Ads headlines, long headlines, or descriptions.
 metadata:
   trigger: User types "strong ads" / "/strong-ads", or asks for Google Ads headlines/descriptions
 ---
 
 # Strong Ads
 
-Write Google Ads copy that converts: headlines, long headlines, and descriptions for **Search (RSA)** and **Performance Max** campaigns. Output is in **English**. Copy must read like a sharp human marketer wrote it — never like AI.
+Write Google Ads copy that converts: headlines, long headlines, and descriptions for **Search (RSA)** and **Performance Max** campaigns. Write the ads in the **target market's language** (see Step 1) — the language the customer's audience actually searches in, not necessarily the language of this conversation. Copy must read like a sharp local marketer wrote it — never like AI, never like a translation.
 
 This skill is self-contained. It carries its own anti-AI rules (from stop-slop), its own character limits, and its own headline structure. Do not depend on other skills.
 
@@ -34,11 +34,12 @@ Write a short **Business Brief** from these 7 answers and show it to the user be
 After the Business Brief, fill gaps. Ask the user only for what you cannot find or infer:
 
 1. **Website URL** — required. Fetch it and pull real facts (offers, proof, product details).
-2. **What the business actually does / its limits** — the real scope. (e.g. "we customize" can mean adjust-down only, not scale-up; "we coordinate setup" vs "we just ship.") Confirm scope so ads never promise more than the business delivers.
-3. **Target keywords** — infer from the site + the Business Brief; confirm with the user.
-4. **Offers / proof** — discounts, guarantees, years in business, ratings, certifications. Pull what you can; ask only for what's missing.
-5. **Campaign type** — RSA, Performance Max, or both (default: both).
-6. **Competitors** — DO NOT ask the user. Find them yourself (Step 2).
+2. **Target market & language** — the country/audience the ads run to, and the language they search in. Infer it from the site's language and market; if the business sells to more than one market, or it's unclear, ask. Write ALL ad copy in that language. Write idiomatic copy a native speaker would write, not a translation of English. Keywords, competitor research, and pain research should also be done in that market's language.
+3. **What the business actually does / its limits** — the real scope. (e.g. "we customize" can mean adjust-down only, not scale-up; "we coordinate setup" vs "we just ship.") Confirm scope so ads never promise more than the business delivers.
+4. **Target keywords** — infer from the site + the Business Brief, in the market's language; confirm with the user.
+5. **Offers / proof** — discounts, guarantees, years in business, ratings, certifications. Pull what you can; ask only for what's missing.
+6. **Campaign type** — RSA, Performance Max, or both (default: both).
+7. **Competitors** — DO NOT ask the user. Find them yourself (Step 2).
 
 Always fetch the user's site before writing. Never invent claims, numbers, or guarantees. Never promise a capability the business does not have.
 
@@ -81,6 +82,8 @@ Find the real tension of the **buyer from the Business Brief (Step 0)** — NOT 
 
 **Critical rule:** research the pains of the PERSON, at THEIR price point, in THEIR situation. The pain of someone buying an $80 commodity ("how do I use it") is NOT the pain of someone buying a $5,000 premium item ("is it genuine, is it right for my need, will it arrive perfect"). Searching "[product] problems" gives you the wrong, low-value buyer's pain. Search for the Step 0 buyer instead.
 
+**Hard rule — no invented pains. Every pain MUST have a source.** Do not write a pain from intuition, common tropes, or what "sounds right." Each pain you use must come from a real source you actually read: a forum thread, a review, a Reddit/Quora post, a competitor's complaints. Record the source (URL or a short quote) next to each pain. If you cannot point to a source, you may NOT use that pain — drop it or go research it. A plausible-sounding pain with no evidence behind it is exactly the failure this step exists to prevent. When in doubt, search again; never fill the gap with a guess.
+
 1. Build queries around the BUYER and the STAKES, not just the product:
    - `[buyer type] [product] [what they fear]` — e.g. `[product] authentic worried buyers reddit`, `[professional] sourcing [product] problem`.
    - Forums where THAT buyer talks: for enthusiasts → niche subreddits and hobby forums; for pros → industry communities; for B2B → industry subreddits, G2.
@@ -89,10 +92,10 @@ Find the real tension of the **buyer from the Business Brief (Step 0)** — NOT 
 2. **Group pains by type, but keep them specific to this buyer.** Buckets vary by business. For a high-value premium product they are usually: **authenticity** (is it real?), **suitability** (is it right for my exact need?), **scarcity** (will I find the right one / will it sell first?), **condition vs photos** (will it look as good in person?), **safe arrival** (fragile, expensive, will it ship intact?), **trust/communication** (will the seller actually respond?). For a SaaS or service they differ. Derive the buckets from the Brief, do not reuse a fixed list.
 3. Map each pain bucket to OUR solution, within the business's real scope (Step 1). Never promise a fix the business can't deliver (e.g. don't claim "fits any size" if you can only adjust down, not scale up). Write the Pain → Solution headlines only from buckets where we genuinely win.
 
-Summarize:
+Summarize. The **Source** column is mandatory — a URL or a real quote for every row. A row with an empty Source is not allowed; remove it.
 
-| Pain bucket | What customers say | Our solution (the headline angle) |
-|-------------|--------------------|-----------------------------------|
+| Pain bucket | What customers say (real quote) | Source (URL) | Our solution (the headline angle) |
+|-------------|---------------------------------|--------------|-----------------------------------|
 
 ## Step 3 — Character limits (hard rules — never exceed)
 
@@ -176,6 +179,7 @@ Unlock, Unleash, Elevate, Discover, Seamless, Seamlessly, Effortless, Effortless
 - Active voice, real verbs.
 - Vary the lines — don't make all 5 in a block the same shape.
 - Use real numbers, offers, and proof ONLY if the user gave them. Never fabricate.
+- **Other languages:** the banned list above is English. If the ads are in another language, apply the SAME rule to that language's own marketing clichés and AI tells, and never deliver copy that reads like a translation of English.
 
 ## Step 6 — Output format
 
@@ -194,6 +198,7 @@ Keep the whole thing copy-paste ready into Google Ads Editor.
 - Did you write a Business Brief (Step 0) BEFORE keywords/competitors? Did you analyze the business (who/why/price/fear), not just the product?
 - Would your analysis read identically for a cheap version of the product? If yes, you went too shallow — redo Step 0.
 - Are the pains the BUYER's pains (right person, right price), not generic category pains?
+- Does EVERY pain have a real source (URL or quote) in the table? If you can't cite it, you invented it — remove it or go research it. No guessed pains.
 - Does any headline promise something outside the business's real scope (Step 1)? Cut it.
 - Were competitors found and confirmed (not asked from the user)?
 - Did each competitor get analyzed from BOTH their site and their live ads?

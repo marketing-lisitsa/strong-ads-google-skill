@@ -8,8 +8,9 @@ Unlike a quick "write me some headlines" prompt, this skill **does the homework 
 
 - 🧠 **Deep business analysis** — who really buys, at what price, what they fear, and what they buy *instead*. It analyzes the *business*, not just the *product*.
 - 🔎 **Automatic competitor research** — finds your real competitors, reads their sites and live Google ads, and spots the gaps you can own.
-- 💔 **Real buyer pain research** — pulls the actual frustrations of *your* buyer from forums and reviews (not generic category complaints).
+- 💔 **Real buyer pain research** — pulls the actual frustrations of *your* buyer from forums and reviews (not generic category complaints), and **cites a source for every pain** so nothing is invented.
 - ✍️ **30 headlines in 6 angles** + long headlines + descriptions, all within **exact Google Ads character limits**.
+- 🌍 **Writes in your market's language** — detects the audience's language from the site and writes idiomatic local copy, not a translation.
 - 🚫 **No AI slop** — bans the tells (Unlock, Elevate, Seamless, Discover…) and writes specific, human copy.
 
 It outputs everything in a clean table, copy-paste ready for Google Ads Editor.
@@ -35,14 +36,16 @@ Run it on any business and you get:
 
 The 30 headlines come grouped into 6 blocks of 5, so each one earns its spot instead of repeating the same idea. Every block is written from your Business Brief, competitor gaps, and real buyer pains — never generic filler.
 
+Example: a small-batch coffee roaster that roasts to order and ships within 24 hours.
+
 | # | Block | What it covers | Example |
 |---|-------|----------------|---------|
 | **1** | **General / business & product** | Broad lines about the business and what it sells | `Small-Batch Coffee Roaster` |
 | **2** | **Product features** | Concrete specs, materials, sizes, the actual product | `Roasted Fresh, Shipped in 24h` |
-| **3** | **Value to the buyer** | What the buyer gets out of it | `Coffee Worth Waking Up For` |
+| **3** | **Value to the buyer** | What the buyer gets out of it | `Your Best Cup, Made at Home` |
 | **4** | **Pain → solution** | A real buyer frustration and how you fix it | `Stale Beans? Not Anymore` |
-| **5** | **Better than competitors** | What rivals leave unsaid, pulled from their live ads | `Roasted to Order, Never Stored` |
-| **6** | **Call to action** | Real CTAs that fit the business, not generic AI ones | `Start Your Subscription` |
+| **5** | **Better than competitors** | What rivals leave unsaid, pulled from their live ads | `We Roast After You Order` |
+| **6** | **Call to action** | Real CTAs that fit the business, not generic AI ones | `Get Your First Bag` |
 
 Then on top of the 30 headlines you get **5 long headlines** (≤ 90 chars, for Performance Max) and **descriptions** (4 for RSA, up to 5 for PMax) — each built to pair with the headlines and pass Google's character limits.
 
